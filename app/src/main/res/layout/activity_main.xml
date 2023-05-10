@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#067520"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="btnStart_clicked"
+        android:text="Start"
+        android:background="@drawable/btn_rounded_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnHit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/btn_rounded_grey"
+        android:onClick="btnHit_clicked"
+        android:text="Hit"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/btnStart"
+        app:layout_constraintEnd_toStartOf="@+id/btnStand"
+        app:layout_constraintStart_toStartOf="@+id/guideline1a" />
+
+    <Button
+        android:id="@+id/btnStand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/btn_rounded_grey"
+        android:onClick="btnStand_clicked"
+        android:text="Stand"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/btnStart"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8b"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnHit" />
+
+    <TextView
+        android:id="@+id/tvDealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="DEALER"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline1a"
+        app:layout_constraintTop_toBottomOf="@+id/dealer_card1" />
+
+    <TextView
+        android:id="@+id/tvRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Round"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/player_card1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dealer_card1" />
+
+    <TextView
+        android:id="@+id/tvPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="PLAYER"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/player_card1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8b" />
+
+    <ImageView
+        android:id="@+id/dealer_card1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline1b"
+        app:layout_constraintStart_toStartOf="@+id/guideline1a"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/dealer_card2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2b"
+        app:layout_constraintStart_toStartOf="@+id/guideline2a"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/dealer_card3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3b"
+        app:layout_constraintStart_toStartOf="@+id/guideline3a"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/dealer_card4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4b"
+        app:layout_constraintStart_toStartOf="@+id/guideline4a"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/dealer_card5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5b"
+        app:layout_constraintStart_toStartOf="@+id/guideline5a"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/dealer_card6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6b"
+        app:layout_constraintStart_toStartOf="@+id/guideline6a"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/dealer_card7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7b"
+        app:layout_constraintStart_toStartOf="@+id/guideline7a"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/dealer_card8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8b"
+        app:layout_constraintStart_toStartOf="@+id/guideline8a"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/player_card1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnHit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline1b"
+        app:layout_constraintStart_toStartOf="@+id/guideline1a"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/player_card2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnHit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2b"
+        app:layout_constraintStart_toStartOf="@+id/guideline2a"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/player_card3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnHit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3b"
+        app:layout_constraintStart_toStartOf="@+id/guideline3a"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/player_card4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnHit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4b"
+        app:layout_constraintStart_toStartOf="@+id/guideline4a"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/player_card5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnHit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5b"
+        app:layout_constraintStart_toStartOf="@+id/guideline5a"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/player_card6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnHit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6b"
+        app:layout_constraintStart_toStartOf="@+id/guideline6a"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/player_card7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnHit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7b"
+        app:layout_constraintStart_toStartOf="@+id/guideline7a"
+        app:srcCompat="@drawable/backofcard" />
+
+    <ImageView
+        android:id="@+id/player_card8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnHit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8b"
+        app:layout_constraintStart_toStartOf="@+id/guideline8a"
+        app:srcCompat="@drawable/backofcard" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline1a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline1b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.11" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.53" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.71" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.56" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.89" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline8a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline8b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+</android.support.constraint.ConstraintLayout>

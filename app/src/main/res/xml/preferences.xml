@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="8"
+        android:entries="@array/maxNoOfCards"
+        android:entryValues="@array/maxNoOfCards"
+        android:key="list_maxCards"
+        android:summary="%s"
+        android:title="Maximum Cards" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="switch_history"
+        android:title="Record History" />
+</PreferenceScreen>
